@@ -132,3 +132,4 @@ dmypy.json
 /templates
 *.ipynb
 *.pth
+.idea/
