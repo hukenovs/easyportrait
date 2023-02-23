@@ -2,27 +2,23 @@
 # EasyPortrait - Face Parsing and Portrait Segmentation Dataset
 We introduce a large-scale image dataset **EasyPortrait** for portrait segmentation and face parsing. Proposed dataset can be used in several tasks, such as background removal in conference applications, teeth whitening, face skin enhancement, red eye removal or eye colorization, and so on. 
 
-EasyPortrait dataset size is about **26GB** and it contains **20 000** RGB images (~17.5K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 2000 images, and the test set includes 4000 images.
+EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB images (~17.5K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 2000 images, and the test set includes 4000 images.
 
 ## Downloads
-We split dataset of images into 3 archives. Download and unzip them from the following links:
+Use the following links:
 
-### Links
-Click to start downloading:
-
-| Link                                  | Size   |
-|---------------------------------------|--------|
-| [`train`](https://sc.link/gvlr)       | 18.14G |
-| [`test`](https://sc.link/vOEn)        | 5.3G   |
-| [`val`](https://sc.link/rKzL)         | 2.6G   |
-| [`annotations`](https://sc.link/wPGX) | 235M   |
+| Link                                  | Size |
+|---------------------------------------|------|
+| [`images`](https://sc.link/LNLr)      | 26G  |
+| [`annotations`](https://sc.link/wPGX) | 235M |
 
 ### Structure
 ```
-segmentation
-├── train.zip          # Train set: 14k
-├── val.zip            # Validation set: 2k
-├── test.zip           # Test set: 4k
+.
+├── images.zip
+│   ├── train/         # Train set: 14k
+│   ├── val/           # Validation set: 2k
+│   ├── test/          # Test set: 4k
 ├── annotations.zip
 │   ├── meta.zip       # Meta-information (width, height, brightness, imhash, user_id)
 │   ├── train/     
@@ -46,7 +42,7 @@ python demo.py -p <PATH_TO_MODEL>
 
 ## Annotations
 
-Annotations are presented as 2D-images (`png` format) with several classes:
+Annotations are presented as 2D-arrays, images in `png` format with several classes:
 
 | Index | Class      |
 |------:|:-----------|
@@ -69,20 +65,23 @@ Also we provide some additional meta-information for dataset in `annotations/met
 |  2 | d17ca986-...  | cf...   | a69...    |  1920 |   1080 |        140 | False | True  | False |
 
 where:
-- `attachment_id` is the image file name without extension
-- `user_id` is the unique anonymized user ID
-- `data_hash` is the image hash by Perceptual hashing
-- `width` is the image width
-- `height` is the image height
-- `brightness` is the image brightness
+- `attachment_id` - image file name without extension
+- `user_id` - unique anonymized user ID
+- `data_hash` - image hash by using Perceptual hashing
+- `width` - image width
+- `height` - image height
+- `brightness` - image brightness
 - `train`, `test`, `valid` are the binary columns for train / test / val subsets respectively 
 
-### Authors and Credits
+## Images
+![easyportrait](images/data.jpg)
+
+## Authors and Credits
 - [Alexander Kapitanov](https://www.linkedin.com/in/hukenovs)
 - [Karina Kvanchiani](https://www.linkedin.com/in/kvanchiani)
 - [Sofia Kirillova](https://www.linkedin.com/in/gofixyourself/)
 
-### Citation
+## Citation
 You can cite the paper using the following BibTeX entry:
 
     @article{EasyPortrait,
@@ -92,7 +91,7 @@ You can cite the paper using the following BibTeX entry:
         year={2023}
     }
 
-### License
+## License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 Please see the specific [license](https://github.com/hukenovs/easyportrait/blob/master/license/en_us.pdf).
