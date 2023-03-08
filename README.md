@@ -5,7 +5,6 @@ We introduce a large-scale image dataset **EasyPortrait** for portrait segmentat
 EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB images (~17.5K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 2000 images, and the test set includes 4000 images.
 
 ## Downloads
-Use the following links:
 
 | Link                                  | Size |
 |---------------------------------------|------|
@@ -28,21 +27,20 @@ Use the following links:
 ```
 
 ## Models
-We provide some pre-trained models as the baseline for portrait segmentation and face parsing.
+We provide some pre-trained models as the baseline for portrait segmentation and face parsing. We use mean Intersection over Union (mIoU) as the main metric. 
 
-| Model Name                | Metric |
-|---------------------------|--------|
-| [model_name](https://...) | ...    |
-| [model_name](https://...) | ...    |
-
-## Demo
- ```bash
-python demo.py -p <PATH_TO_MODEL>
-```
+| Model Name                                     | Parameters (M) | Input shape | mIOU      |
+|------------------------------------------------|----------------|-------------|-----------|
+| [LR-ASPP + MobileNet-V3](https://sc.link/gBo6) | 1.14           | 1024 × 1024 | 73.13     |
+| [FCN + MobileNet-V2](https://sc.link/9xZ3)     | 9.71           | 1024 × 1024 | 81.23     |
+| [FPN + ResNet-50](https://sc.link/6r19)        | 28.5           | 512 × 512   | **83.13** |
+| [BiSeNet-V2](https://sc.link/8wZo)             | 14.79          | 1024 × 1024 | 69.13     |
+| [SegFormer-B0](https://sc.link/0lZX)           | 3.72           | 1024 × 1024 | 73.41     |
+| [SegFormer-B2](https://sc.link/7vZA)           | 24.73          | 1024 × 1024 | 76.19     |
 
 ## Annotations
 
-Annotations are presented as 2D-arrays, images in `png` format with several classes:
+Annotations are presented as 2D-arrays, images in `*.png` format with several classes:
 
 | Index | Class      |
 |------:|:-----------|
@@ -56,7 +54,7 @@ Annotations are presented as 2D-arrays, images in `png` format with several clas
 |     7 | LIPS       |
 |     8 | TEETH      |
 
-Also we provide some additional meta-information for dataset in `annotations/meta.zip` file
+Also, we provide some additional meta-information for dataset in `annotations/meta.zip` file:
 
 |    | attachment_id | user_id | data_hash | width | height | brightness | train | test  | valid |
 |---:|:--------------|:--------|:----------|------:|-------:|-----------:|:------|:------|:------|
