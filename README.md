@@ -26,52 +26,28 @@ EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB imag
 ...
 ```
 
-## Training, Evaluation and Testing on EasyPortrait
-
->The code is based on [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) with 0.30.0 version.
-
-Models were trained and evaluated on 8 NVIDIA V100 GPUs with CUDA 11.2
-
-For installation process follow the instructions [here](https://github.com/open-mmlab/mmsegmentation/blob/v0.30.0/docs/en/get_started.md#installation) and use the **requirements.txt** file in our repository.
-
-### Training
-For single GPU mode:
-```console
-python ./pipelines/tools/train.py ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py --gpu-id <GPU_ID>
-```
-
-For distributed training mode:
-```console
-./pipelines/tools/dist_train.sh ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py <NUM_GPUS>
-```
-### Evaluation
-For single GPU mode:
-```console
-python ./pipelines/tools/test.py <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> --gpu-id <GPU_ID> --eval mIoU
-```
-
-For distributed evaluation mode:
-```console
-./pipelines/tools/dist_test.sh <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> <NUM_GPUS> --eval mIoU
-```
-### Run demo
-```console
-python ./pipelines/demo/image_demo.py <PATH_TO_IMG> <PATH_TO_MODEL_CONFIG> <PATH_TO_CHECKPOINT> --palette=easy_portrait --out-file=<PATH_TO_OUT_FILE>
-```
-
-
-
 ## Models
 We provide some pre-trained models as the baseline for portrait segmentation and face parsing. We use mean Intersection over Union (mIoU) as the main metric. 
 
 | Model Name                                     | Parameters (M) | Input shape | mIOU      |
 |------------------------------------------------|----------------|-------------|-----------|
 | [LR-ASPP + MobileNet-V3](https://sc.link/gBo6) | 1.14           | 1024 × 1024 | 73.13     |
+| [FCN + MobileNet-V2](https://sc.link/ErPv)     | 9.71           | 384 × 384   | 74.3      |
+| [FCN + MobileNet-V2](https://sc.link/vKjm)     | 9.71           | 512 × 512   | 77.01     |
 | [FCN + MobileNet-V2](https://sc.link/9xZ3)     | 9.71           | 1024 × 1024 | 81.23     |
-| [FPN + ResNet-50](https://sc.link/6r19)        | 28.5           | 512 × 512   | **83.13** |
+| [FPN + ResNet-50](https://sc.link/6r19)        | 28.5           | 512 × 512   | 83.13     |
+| [FPN + ResNet-50](https://sc.link/Gy97)        | 28.5           | 1024 × 1024 | **85.97** |
+| [BiSeNet-V2](https://sc.link/ryYE)             | 14.79          | 512 × 512   | 77.93     |
 | [BiSeNet-V2](https://sc.link/8wZo)             | 14.79          | 1024 × 1024 | 69.13     |
+| [SegFormer-B0](https://sc.link/wMkR)           | 3.72           | 384 × 384   | 79.82     |
 | [SegFormer-B0](https://sc.link/0lZX)           | 3.72           | 1024 × 1024 | 73.41     |
+| [SegFormer-B2](https://sc.link/AjmO)           | 24.73          | 384 × 384   | 81.59     |
+| [SegFormer-B2](https://sc.link/zVnY)           | 24.73          | 512 × 512   | 83.03     |
 | [SegFormer-B2](https://sc.link/7vZA)           | 24.73          | 1024 × 1024 | 76.19     |
+| [SegFormer-B5](https://sc.link/yQm7)           | 81.97          | 384 × 384   | 81.66     |
+| [SegFormer-B5](https://sc.link/xOl9)           | 81.97          | 1024 × 1024 | 85.80     |
+| [SegNeXt + MSCAN-T](https://sc.link/Dp0x)      | 4.23           | 384 × 384   | 75.01     |
+| [SegNeXt + MSCAN-T](https://sc.link/BlnX)      | 4.23           | 512 × 512   | 78.59     |
 
 ## Annotations
 
@@ -108,6 +84,41 @@ where:
 
 ## Images
 ![easyportrait](images/data.jpg)
+
+
+## Training, Evaluation and Testing on EasyPortrait
+
+>The code is based on [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) with 0.30.0 version.
+
+Models were trained and evaluated on 8 NVIDIA V100 GPUs with CUDA 11.2.
+
+For installation process follow the instructions [here](https://github.com/open-mmlab/mmsegmentation/blob/v0.30.0/docs/en/get_started.md#installation) and use the **requirements.txt** file in our repository.
+
+### Training
+For single GPU mode:
+```console
+python ./pipelines/tools/train.py ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py --gpu-id <GPU_ID>
+```
+
+For distributed training mode:
+```console
+./pipelines/tools/dist_train.sh ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py <NUM_GPUS>
+```
+
+### Evaluation
+For single GPU mode:
+```console
+python ./pipelines/tools/test.py <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> --gpu-id <GPU_ID> --eval mIoU
+```
+
+For distributed evaluation mode:
+```console
+./pipelines/tools/dist_test.sh <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> <NUM_GPUS> --eval mIoU
+```
+### Run demo
+```console
+python ./pipelines/demo/image_demo.py <PATH_TO_IMG> <PATH_TO_MODEL_CONFIG> <PATH_TO_CHECKPOINT> --palette=easy_portrait --out-file=<PATH_TO_OUT_FILE>
+```
 
 ## Authors and Credits
 - [Alexander Kapitanov](https://www.linkedin.com/in/hukenovs)
