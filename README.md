@@ -26,6 +26,41 @@ EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB imag
 ...
 ```
 
+## Training, Evaluation and Testing on EasyPortrait
+
+>The code is based on [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) with 0.30.0 version.
+
+Models were trained and evaluated on 8 NVIDIA V100 GPUs with CUDA 11.2
+
+For installation process follow the instructions [here](https://github.com/open-mmlab/mmsegmentation/blob/v0.30.0/docs/en/get_started.md#installation) and use the **requirements.txt** file in our repository.
+
+### Training
+For single GPU mode:
+```console
+python ./pipelines/tools/train.py ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py --gpu-id <GPU_ID>
+```
+
+For distributed training mode:
+```console
+./pipelines/tools/dist_train.sh ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py <NUM_GPUS>
+```
+### Evaluation
+For single GPU mode:
+```console
+python ./pipelines/tools/test.py <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> --gpu-id <GPU_ID> --eval mIoU
+```
+
+For distributed evaluation mode:
+```console
+./pipelines/tools/dist_test.sh <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> <NUM_GPUS> --eval mIoU
+```
+### Run demo
+```console
+python ./pipelines/demo/image_demo.py <PATH_TO_IMG> <PATH_TO_MODEL_CONFIG> <PATH_TO_CHECKPOINT> --palette=easy_portrait --out-file=<PATH_TO_OUT_FILE>
+```
+
+
+
 ## Models
 We provide some pre-trained models as the baseline for portrait segmentation and face parsing. We use mean Intersection over Union (mIoU) as the main metric. 
 
