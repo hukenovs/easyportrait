@@ -133,3 +133,4 @@ dmypy.json
 *.ipynb
 *.pth
 .idea/
+.ipynb_checkpoints/
