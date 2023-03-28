@@ -1,6 +1,6 @@
 _base_ = [
     '../../__base__/models/fcn_resnet50.py',
-    '../../__base__/datasets/easyportait_1024x1024.py',
+    '../../__base__/datasets/easyportrait_1024x1024.py',
     '../../__base__/default_runtime.py',
     '../../__base__/schedules/schedule_20k_adamw.py'
 ]
