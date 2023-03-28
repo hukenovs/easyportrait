@@ -31,19 +31,19 @@ We provide some pre-trained models as the baseline for portrait segmentation and
 
 | Model Name                                     | Parameters (M) | Input shape | mIOU      |
 |------------------------------------------------|----------------|-------------|-----------|
-| [LR-ASPP + MobileNet-V3](https://sc.link/gBo6) | 1.14           | 1024 × 1024 | 73.13     |
+| [LR-ASPP + MobileNet-V3](https://sc.link/gBo6) | 1.14           | 1024 × 1024 | 77.55     |
 | [FCN + MobileNet-V2](https://sc.link/ErPv)     | 9.71           | 384 × 384   | 74.3      |
 | [FCN + MobileNet-V2](https://sc.link/vKjm)     | 9.71           | 512 × 512   | 77.01     |
 | [FCN + MobileNet-V2](https://sc.link/9xZ3)     | 9.71           | 1024 × 1024 | 81.23     |
 | [FPN + ResNet-50](https://sc.link/6r19)        | 28.5           | 512 × 512   | 83.13     |
 | [FPN + ResNet-50](https://sc.link/Gy97)        | 28.5           | 1024 × 1024 | **85.97** |
 | [BiSeNet-V2](https://sc.link/ryYE)             | 14.79          | 512 × 512   | 77.93     |
-| [BiSeNet-V2](https://sc.link/8wZo)             | 14.79          | 1024 × 1024 | 69.13     |
+| [BiSeNet-V2](https://sc.link/8wZo)             | 14.79          | 1024 × 1024 | 83.53    |
 | [SegFormer-B0](https://sc.link/wMkR)           | 3.72           | 384 × 384   | 79.82     |
-| [SegFormer-B0](https://sc.link/0lZX)           | 3.72           | 1024 × 1024 | 73.41     |
+| [SegFormer-B0](https://sc.link/0lZX)           | 3.72           | 1024 × 1024 | 84.27     |
 | [SegFormer-B2](https://sc.link/AjmO)           | 24.73          | 384 × 384   | 81.59     |
 | [SegFormer-B2](https://sc.link/zVnY)           | 24.73          | 512 × 512   | 83.03     |
-| [SegFormer-B2](https://sc.link/7vZA)           | 24.73          | 1024 × 1024 | 76.19     |
+| [SegFormer-B2](https://sc.link/7vZA)           | 24.73          | 1024 × 1024 | 85.72     |
 | [SegFormer-B5](https://sc.link/yQm7)           | 81.97          | 384 × 384   | 81.66     |
 | [SegFormer-B5](https://sc.link/xOl9)           | 81.97          | 1024 × 1024 | 85.80     |
 | [SegNeXt + MSCAN-T](https://sc.link/Dp0x)      | 4.23           | 384 × 384   | 75.01     |
