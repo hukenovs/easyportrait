@@ -1,6 +1,6 @@
 _base_ = [
     '../../__base__/models/bisenetv2.py',
-    '../../__base__/datasets/easyportait_1024x1024.py',
+    '../../__base__/datasets/easyportrait_1024x1024.py',
     '../../__base__/default_runtime.py',
     '../../__base__/schedules/schedule_20k_adamw.py'
 ]
@@ -68,6 +68,6 @@ model = dict(
 lr_config = dict(warmup='linear', warmup_iters=1000)
 optimizer = dict(lr=0.05)
 data = dict(
-    samples_per_gpu=1,
-    workers_per_gpu=1,
+    samples_per_gpu=2,
+    workers_per_gpu=2,
 )
