@@ -6,10 +6,13 @@ EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB imag
 
 ## Downloads
 
-| Link                                  | Size |
-|---------------------------------------|------|
-| [`images`](https://sc.link/LNLr)      | 26G  |
-| [`annotations`](https://sc.link/wPGX) | 235M |
+| Link                                     | Size  |
+|------------------------------------------|-------|
+| [`images`](https://sc.link/LNLr)         | 26G   |
+| [`annotations`](https://sc.link/wPGX)    | 235M  |
+| [`train set`](https://sc.link/gvlr)      | 18.1G |
+| [`validation set`](https://sc.link/rKzL) | 2.6G  |
+| [`test set`](https://sc.link/vOEn)       | 5.2G  |
 
 ### Structure
 ```
