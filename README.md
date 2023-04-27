@@ -7,13 +7,13 @@ EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB imag
 For more information see our paper [EasyPortrait – Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
 ## Downloads
 
-| Link                                     | Size  |
-|------------------------------------------|-------|
-| [`images`](https://sc.link/YEE9p)         | 26G   |
-| [`annotations`](https://sc.link/2kkwv)    | 235M  |
-| [`train set`](https://sc.link/Z6696)      | 18.1G |
-| [`validation set`](https://sc.link/VOOj1) | 2.6G  |
-| [`test set`](https://sc.link/1wwvj)       | 5.2G  |
+| Link                                                                                                          | Size  |
+|---------------------------------------------------------------------------------------------------------------|-------|
+| [`images`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/images.zip)           | 26G   |
+| [`annotations`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/annotations.zip) | 235M  |
+| [`train set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/train.zip)         | 18.1G |
+| [`validation set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/val.zip)      | 2.6G  |
+| [`test set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/test.zip)           | 5.2G  |
 
 Also, you can download EasyPortrait dataset from [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait).
 
@@ -37,23 +37,23 @@ We provide some pre-trained models as the baseline for portrait segmentation and
 
 | Model Name                                     | Parameters (M) | Input shape | mIOU      |
 |------------------------------------------------|----------------|-------------|-----------|
-| [LR-ASPP + MobileNet-V3](https://sc.link/rkkl6) | 1.14           | 1024 × 1024 | 77.55     |
-| [FCN + MobileNet-V2](https://sc.link/jRR9W)     | 9.71           | 384 × 384   | 74.3      |
-| [FCN + MobileNet-V2](https://sc.link/gJJ99)     | 9.71           | 512 × 512   | 77.01     |
-| [FCN + MobileNet-V2](https://sc.link/kRR0x)     | 9.71           | 1024 × 1024 | 81.23     |
-| [FPN + ResNet-50](https://sc.link/qxxkr)        | 28.5           | 512 × 512   | 83.13     |
-| [FPN + ResNet-50](https://sc.link/wppqw)        | 28.5           | 1024 × 1024 | **85.97** |
-| [BiSeNet-V2](https://sc.link/lYY9l)             | 14.79          | 512 × 512   | 77.93     |
-| [BiSeNet-V2](https://sc.link/mZZ9p)             | 14.79          | 1024 × 1024 | 83.53    |
-| [SegFormer-B0](https://sc.link/o22gK)           | 3.72           | 384 × 384   | 79.82     |
-| [SegFormer-B0](https://sc.link/pYYj6)           | 3.72           | 1024 × 1024 | 84.27     |
-| [SegFormer-B2](https://sc.link/n559l)           | 24.73          | 384 × 384   | 81.59     |
-| [SegFormer-B2](https://sc.link/lYY96)           | 24.73          | 512 × 512   | 83.03     |
-| [SegFormer-B2](https://sc.link/mZZ90)           | 24.73          | 1024 × 1024 | 85.72     |
-| [SegFormer-B5](https://sc.link/0RRrX)           | 81.97          | 384 × 384   | 81.66     |
-| [SegFormer-B5](https://sc.link/kRR0X)           | 81.97          | 1024 × 1024 | 85.80     |
-| [SegNeXt + MSCAN-T](https://sc.link/jRR95)      | 4.23           | 384 × 384   | 75.01     |
-| [SegNeXt + MSCAN-T](https://sc.link/gJJ96)      | 4.23           | 512 × 512   | 78.59     |
+| [LR-ASPP + MobileNet-V3](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/lraspp.mobilenetv3.1024x1024.pth)  | 1.14           | 1024 × 1024 | 77.55     |
+| [FCN + MobileNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/fcn.mobilentv2.384x384.pth)            | 9.71           | 384 × 384   | 74.3      |
+| [FCN + MobileNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/fcn.mobilentv2.512x512.pth)            | 9.71           | 512 × 512   | 77.01     |
+| [FCN + MobileNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/fcn.mobilentv2.1024x1024.pth)          | 9.71           | 1024 × 1024 | 81.23     |
+| [FPN + ResNet-50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/fpn.resnet50.512x512.pth)                 | 28.5           | 512 × 512   | 83.13     |
+| [FPN + ResNet-50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/fpn.resnet50.1024x1024.pth)               | 28.5           | 1024 × 1024 | **85.97** |
+| [BiSeNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/bisenetv2.512x512.pth)                         | 14.79          | 512 × 512   | 77.93     |
+| [BiSeNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/bisenetv2.1024x1024.pth)                       | 14.79          | 1024 × 1024 | 83.53     |
+| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b0.384x384.pth)                    | 3.72           | 384 × 384   | 79.82     |
+| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b0.1024x1024.pth)                  | 3.72           | 1024 × 1024 | 84.27     |
+| [SegFormer-B2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b2.384x384.pth)                    | 24.73          | 384 × 384   | 81.59     |
+| [SegFormer-B2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b2.512x512.pth)                    | 24.73          | 512 × 512   | 83.03     |
+| [SegFormer-B2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b2.1024x1024.pth)                  | 24.73          | 1024 × 1024 | 85.72     |
+| [SegFormer-B5](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b5.384x384.pth)                    | 81.97          | 384 × 384   | 81.66     |
+| [SegFormer-B5](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segformer.b5.1024x1024.pth)                  | 81.97          | 1024 × 1024 | 85.80     |
+| [SegNeXt + MSCAN-T](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segnext.mscanT.384x384.pth)             | 4.23           | 384 × 384   | 75.01     |
+| [SegNeXt + MSCAN-T](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/models/segnext.mscanT.512x512.pth)             | 4.23           | 512 × 512   | 78.59     |
 
 ## Annotations
 
