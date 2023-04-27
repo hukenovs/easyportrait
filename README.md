@@ -4,6 +4,7 @@ We introduce a large-scale image dataset **EasyPortrait** for portrait segmentat
 
 EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB images (~17.5K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 2000 images, and the test set includes 4000 images.
 
+For more information see our arxiv paper [EasyPortrait – Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
 ## Downloads
 
 | Link                                     | Size  |
@@ -13,6 +14,8 @@ EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB imag
 | [`train set`](https://sc.link/Z6696)      | 18.1G |
 | [`validation set`](https://sc.link/VOOj1) | 2.6G  |
 | [`test set`](https://sc.link/1wwvj)       | 5.2G  |
+
+Also, you can download EasyPortrait dataset from [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait).
 
 ### Structure
 ```
@@ -97,36 +100,52 @@ Models were trained and evaluated on 8 NVIDIA V100 GPUs with CUDA 11.2.
 
 For installation process follow the instructions [here](https://github.com/open-mmlab/mmsegmentation/blob/v0.30.0/docs/en/get_started.md#installation) and use the **requirements.txt** file in our repository.
 
-### Training
-For single GPU mode:
-```console
-python ./pipelines/tools/train.py ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py --gpu-id <GPU_ID>
-```
+<details>
+  <summary>Training</summary>
 
-For distributed training mode:
-```console
-./pipelines/tools/dist_train.sh ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py <NUM_GPUS>
-```
+  For single GPU mode:
+  ```console
+  python ./pipelines/tools/train.py ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py --gpu-id <GPU_ID>
+  ```
 
-### Evaluation
-For single GPU mode:
-```console
-python ./pipelines/tools/test.py <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> --gpu-id <GPU_ID> --eval mIoU
-```
+  For distributed training mode:
+  ```console
+  ./pipelines/tools/dist_train.sh ./pipelines/local_configs/easy_portrait_experiments/<model_dir>/<config_file>.py <NUM_GPUS>
+  ```
+</details>
 
-For distributed evaluation mode:
-```console
-./pipelines/tools/dist_test.sh <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> <NUM_GPUS> --eval mIoU
-```
-### Run demo
-```console
-python ./pipelines/demo/image_demo.py <PATH_TO_IMG> <PATH_TO_MODEL_CONFIG> <PATH_TO_CHECKPOINT> --palette=easy_portrait --out-file=<PATH_TO_OUT_FILE>
-```
+<details>
+  <summary>Evaluation</summary>
+
+  For single GPU mode:
+  ```console
+  python ./pipelines/tools/test.py <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> --gpu-id <GPU_ID> --eval mIoU
+  ```
+
+  For distributed evaluation mode:
+  ```console
+  ./pipelines/tools/dist_test.sh <PATH_TO_MODEL_CONFIG>  <PATH_TO_CHECKPOINT> <NUM_GPUS> --eval mIoU
+  ```
+</details>
+
+<details>
+  <summary>Run demo</summary>
+
+  ```console
+  python ./pipelines/demo/image_demo.py <PATH_TO_IMG> <PATH_TO_MODEL_CONFIG> <PATH_TO_CHECKPOINT> --palette=easy_portrait --out-file=<PATH_TO_OUT_FILE>
+  ```
+</details>
 
 ## Authors and Credits
 - [Alexander Kapitanov](https://www.linkedin.com/in/hukenovs)
 - [Karina Kvanchiani](https://www.linkedin.com/in/kvanchiani)
 - [Sofia Kirillova](https://www.linkedin.com/in/gofixyourself/)
+
+## Links
+- [arXiv](https://arxiv.org/abs/2304.13509)
+- [paperswithcode](https://paperswithcode.com/dataset/easyportrait)
+- [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait)
+- [Habr](https://habr.com/ru/companies/sberdevices/articles/731794/)
 
 ## Citation
 You can cite the paper using the following BibTeX entry:
@@ -134,7 +153,7 @@ You can cite the paper using the following BibTeX entry:
     @article{EasyPortrait,
         title={EasyPortrait - Face Parsing and Portrait Segmentation Dataset},
         author={Kapitanov, Alexander and Kvanchiani, Karina and Kirillova Sofia},
-        journal={arXiv preprint <link>},
+        journal={arXiv preprint arXiv:2304.13509},
         year={2023}
     }
 
