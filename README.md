@@ -143,9 +143,10 @@ For installation process follow the instructions [here](https://github.com/open-
 
 ## Links
 - [arXiv](https://arxiv.org/abs/2304.13509)
-- [paperswithcode](https://paperswithcode.com/dataset/easyportrait)
+- [Paperswithcode](https://paperswithcode.com/dataset/easyportrait)
 - [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait)
 - [Habr](https://habr.com/ru/companies/sberdevices/articles/731794/)
+- [Gitlab](https://gitlab.aicloud.sbercloud.ru/rndcv/easyportrait)
 
 ## Citation
 You can cite the paper using the following BibTeX entry:
