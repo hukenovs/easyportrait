@@ -4,7 +4,7 @@ We introduce a large-scale image dataset **EasyPortrait** for portrait segmentat
 
 EasyPortrait dataset size is about **26GB**, and it contains **20 000** RGB images (~17.5K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 2000 images, and the test set includes 4000 images.
 
-For more information see our arxiv paper EasyPortrait – [Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
+For more information see our arxiv paper [EasyPortrait – Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
 ## Downloads
 
 | Link                                     | Size  |
@@ -14,6 +14,7 @@ For more information see our arxiv paper EasyPortrait – [Face Parsing and Port
 | [`train set`](https://sc.link/Z6696)      | 18.1G |
 | [`validation set`](https://sc.link/VOOj1) | 2.6G  |
 | [`test set`](https://sc.link/1wwvj)       | 5.2G  |
+
 Also, you can download EasyPortrait dataset from [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait).
 
 ### Structure
