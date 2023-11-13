@@ -23,6 +23,8 @@ from .stare import STAREDataset
 from .voc import PascalVOCDataset
 from .easy_portrait import EasyPortraitDataset
 from .lapa import LaPaDataset
+from .easy_portrait_face_parsing import EasyPortraitFPDataset, EasyPortraitFPDatasetCross
+from .easy_portrait_portrait_segmentation import EasyPortraitPSDataset
 
 __all__ = [
     'CustomDataset', 'build_dataloader', 'ConcatDataset', 'RepeatDataset',
@@ -33,5 +35,6 @@ __all__ = [
     'COCOStuffDataset', 'LoveDADataset', 'MultiImageMixDataset',
     'iSAIDDataset', 'ISPRSDataset', 'PotsdamDataset', 'FaceOccludedDataset',
     'ImageNetSDataset', 'LoadImageNetSAnnotations',
-    'LoadImageNetSImageFromFile', 'EasyPortraitDataset', 'LaPaDataset'
+    'LoadImageNetSImageFromFile', 'EasyPortraitDataset', 'LaPaDataset',
+    'EasyPortraitFPDataset', 'EasyPortraitPSDataset', 'EasyPortraitFPDatasetCross',
 ]
