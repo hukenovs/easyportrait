@@ -14,7 +14,7 @@ For more information see our paper [EasyPortrait – Face Parsing and Portrait S
    - Train/val/test split: (30,000) **75%** / (4,000) **10%** / (6,000) **15%** by subject `user_id`
    - Multi-gpu training and testing
    - Added new models for face parsing and portrait segmentation
-   - Dataset size is **723GB**
+   - Dataset size is **91.78GB**
    - **13,705** unique persons
  - **`2023/02/23`**: EasyPortrait (Initial Dataset) 💪
    - Dataset size is **26GB**
