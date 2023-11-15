@@ -14,7 +14,7 @@ For more information see our paper [EasyPortrait – Face Parsing and Portrait S
    - Train/val/test split: (30,000) **75%** / (4,000) **10%** / (6,000) **15%** by subject `user_id`
    - Multi-gpu training and testing
    - Added new models for face parsing and portrait segmentation
-   - Dataset size is **723GB**
+   - Dataset size is **91.78GB**
    - **13,705** unique persons
  - **`2023/02/23`**: EasyPortrait (Initial Dataset) 💪
    - Dataset size is **26GB**
@@ -112,20 +112,19 @@ Annotations are presented as 2D-arrays, images in `*.png` format with several cl
 
 Also, we provide some additional meta-information for dataset in `annotations/meta.zip` file:
 
-|    | attachment_id | user_id | data_hash | width | height | brightness | train | test  | valid |
-|---:|:--------------|:--------|:----------|------:|-------:|-----------:|:------|:------|:------|
-|  0 | de81cc1c-...  | 1b...   | e8f...    |  1440 |   1920 |        136 | True  | False | False |
-|  1 | 3c0cec5a-...  | 64...   | df5...    |  1440 |   1920 |        148 | False | False | True  |
-|  2 | d17ca986-...  | cf...   | a69...    |  1920 |   1080 |        140 | False | True  | False |
+|    | image_name | user_id | height | width | set | brightness |
+|---:|:--------------|:--------|:----------|------:|-------:|-----------:|
+|  0 | a753e021-...  | 56...   | 720    |  960 |   train |        126 | 
+|  1 | 4ff04492-...  | ba...   | 1920    |  1440 |   test |        173 | 
+|  2 | e8934c99-...  | 1d...   | 1920    |  1440 |   val |        187 |
 
 where:
-- `attachment_id` - image file name without extension
+- `image_name` - image file name without extension
 - `user_id` - unique anonymized user ID
-- `data_hash` - image hash by using Perceptual hashing
-- `width` - image width
 - `height` - image height
+- `width` - image width
 - `brightness` - image brightness
-- `train`, `test`, `valid` are the binary columns for train / test / val subsets respectively 
+- `set` - "train", "test" or "val" for train / test / val subsets respectively 
 
 ## Images
 ![easyportrait](images/data.jpg)
