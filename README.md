@@ -2,7 +2,7 @@
 # EasyPortrait - Face Parsing and Portrait Segmentation Dataset
 We introduce a large-scale image dataset **EasyPortrait** for portrait segmentation and face parsing. Proposed dataset can be used in several tasks, such as background removal in conference applications, teeth whitening, face skin enhancement, red eye removal or eye colorization, and so on. 
 
-EasyPortrait dataset size is about **91.78GB**, and it contains **40,000** RGB images (~38.3K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 4,000 images, and the test set includes 6,000 images.
+EasyPortrait dataset size is about **91.78GB**, and it contains **40,000** RGB images (~38.3K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 30,000 images, the validation set includes 4,000 images, and the test set includes 6,000 images.
 
 For more information see our paper [EasyPortrait – Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
 
