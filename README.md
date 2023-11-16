@@ -2,7 +2,7 @@
 # EasyPortrait - Face Parsing and Portrait Segmentation Dataset
 We introduce a large-scale image dataset **EasyPortrait** for portrait segmentation and face parsing. Proposed dataset can be used in several tasks, such as background removal in conference applications, teeth whitening, face skin enhancement, red eye removal or eye colorization, and so on. 
 
-EasyPortrait dataset size is about **91.78GB**, and it contains **40,000** RGB images (~38.3K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 14000 images, the validation set includes 4,000 images, and the test set includes 6,000 images.
+EasyPortrait dataset size is about **91.78GB**, and it contains **40,000** RGB images (~38.3K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 30,000 images, the validation set includes 4,000 images, and the test set includes 6,000 images.
 
 For more information see our paper [EasyPortrait – Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
 
@@ -112,20 +112,19 @@ Annotations are presented as 2D-arrays, images in `*.png` format with several cl
 
 Also, we provide some additional meta-information for dataset in `annotations/meta.zip` file:
 
-|    | attachment_id | user_id | data_hash | width | height | brightness | train | test  | valid |
-|---:|:--------------|:--------|:----------|------:|-------:|-----------:|:------|:------|:------|
-|  0 | de81cc1c-...  | 1b...   | e8f...    |  1440 |   1920 |        136 | True  | False | False |
-|  1 | 3c0cec5a-...  | 64...   | df5...    |  1440 |   1920 |        148 | False | False | True  |
-|  2 | d17ca986-...  | cf...   | a69...    |  1920 |   1080 |        140 | False | True  | False |
+|    | image_name | user_id | height | width | set | brightness |
+|---:|:--------------|:--------|:----------|------:|-------:|-----------:|
+|  0 | a753e021-...  | 56...   | 720    |  960 |   train |        126 | 
+|  1 | 4ff04492-...  | ba...   | 1920    |  1440 |   test |        173 | 
+|  2 | e8934c99-...  | 1d...   | 1920    |  1440 |   val |        187 |
 
 where:
-- `attachment_id` - image file name without extension
+- `image_name` - image file name without extension
 - `user_id` - unique anonymized user ID
-- `data_hash` - image hash by using Perceptual hashing
-- `width` - image width
 - `height` - image height
+- `width` - image width
 - `brightness` - image brightness
-- `train`, `test`, `valid` are the binary columns for train / test / val subsets respectively 
+- `set` - "train", "test" or "val" for train / test / val subsets respectively 
 
 ## Images
 ![easyportrait](images/data.jpg)
