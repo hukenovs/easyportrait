@@ -5,6 +5,8 @@ import os
 import os.path as osp
 import time
 import warnings
+import numpy as np
+import random
 
 import mmcv
 import torch
@@ -109,6 +111,16 @@ def parse_args():
 
 
 def main():
+    seed = 1001
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    random.seed(seed)
+    #torch.use_deterministic_algorithms(True)
+    
     args = parse_args()
 
     cfg = Config.fromfile(args.config)
