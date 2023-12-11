@@ -62,7 +62,7 @@ We provide some pre-trained models as the baseline for portrait segmentation and
 | [DANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/danet-ps.pth)                    | 190.2           | 384 x 384   | 98.63    |
 | [DeepLabv3](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/deeplabv3-ps.pth)                    | 260           | 384 x 384   | 98.63    |
 | [ExtremeC3Net](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/extremenet-ps.pth)                    | 0.15           | 384 x 384   | 96.54    |
-| [Fast SCNN](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fcn_scnn-ps.pth)               | 6.13          | 384 x 384 | 97.64 |
+| [Fast SCNN](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fast_scnn-ps.pth)               | 6.13          | 384 x 384 | 97.64 |
 | [FCN + MobileNetv2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fcn-ps.pth)               | 31.17           | 384 x 384 | 98.19 |
 | [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-ps-1024.pth)                 | 108.91           | 1024 × 1024   | 98.54    |
 | [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-ps-512.pth)               | 108.91            | 512 × 512 | 98.64 |
@@ -81,8 +81,8 @@ We provide some pre-trained models as the baseline for portrait segmentation and
 | [BiSeNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/bisenet-fp.pth)                       | 56.5          | 384 x 384 | 76.72     |
 | [DANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/danet-fp.pth)                    | 190.2           | 384 x 384   | 79.3    |
 | [DeepLabv3](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/deeplabv3-fp.pth)                    | 260           | 384 x 384   | 79.11    |
-| [EHANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/ehanet-ps.pth)                    | 44.81          | 384 x 384   | 72.56    |
-| [Fast SCNN](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fcn_scnn-ps.pth)               | 6.13          | 384 x 384 | 67.56|
+| [EHANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/ehanet-fp.pth)                    | 44.81          | 384 x 384   | 72.56    |
+| [Fast SCNN](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fast_scnn-fp.pth)               | 6.13          | 384 x 384 | 67.56|
 | [FCN + MobileNetv2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fcn-fp.pth)               | 31.17           | 384 x 384 | 75.23 |
 | [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-fp-1024.pth)                 | 108.91           | 1024 × 1024   | 85.37   |
 | [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-fp-512.pth)               | 108.91            | 512 × 512 | 83.33 |
