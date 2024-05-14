@@ -4,7 +4,7 @@ We introduce a large-scale image dataset **EasyPortrait** for portrait segmentat
 
 EasyPortrait dataset size is about **91.78GB**, and it contains **40,000** RGB images (~38.3K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 30,000 images, the validation set includes 4,000 images, and the test set includes 6,000 images.
 
-For more information see our paper [EasyPortrait – Face Parsing and Portrait Segmentation Dataset](https://arxiv.org/abs/2304.13509).
+For more information see our paper EasyPortrait – Face Parsing and Portrait Segmentation Dataset.
 
 ## 🔥 Changelog
  - **`2023/11/13`**: We release EasyPortrait 2.0. ✌️
@@ -35,7 +35,7 @@ For more information see our paper [EasyPortrait – Face Parsing and Portrait S
 | [`validation set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/val.zip)      | 10.7 GB  |
 | [`test set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/test.zip)           | 12.8 GB  |
 
-Also, you can download EasyPortrait dataset from [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait).
+Also, you can download EasyPortrait dataset from Kaggle.
 
 ### Structure
 ```
@@ -174,31 +174,7 @@ For installation process follow the instructions [here](https://github.com/open-
   ```
 </details>
 
-## Authors and Credits
-- [Alexander Kapitanov](https://www.linkedin.com/in/hukenovs)
-- [Karina Kvanchiani](https://www.linkedin.com/in/kvanchiani)
-- [Elizaveta Petrova](https://www.linkedin.com/in/kleinsbotle)
-- [Karen Efremyan](https://www.linkedin.com/in/befozg)
-- [Alexander Sautin](https://www.linkedin.com/in/befozg/alexander-sautin-b5039623b)
-
-## Links
-- [arXiv](https://arxiv.org/abs/2304.13509)
-- [Paperswithcode](https://paperswithcode.com/dataset/easyportrait)
-- [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait)
-- [Habr](https://habr.com/ru/companies/sberdevices/articles/731794/)
-- [Gitlab](https://gitlab.aicloud.sbercloud.ru/rndcv/easyportrait)
-
-## Citation
-You can cite the paper using the following BibTeX entry:
-
-    @article{EasyPortrait,
-        title={EasyPortrait - Face Parsing and Portrait Segmentation Dataset},
-        author={Kapitanov, Alexander and Kvanchiani, Karina and Kirillova Sofia},
-        journal={arXiv preprint arXiv:2304.13509},
-        year={2023}
-    }
-
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
-Please see the specific [license](https://github.com/hukenovs/easyportrait/blob/master/license/en_us.pdf).
+Please see the specific license in ```license/en_us.pdf```.
