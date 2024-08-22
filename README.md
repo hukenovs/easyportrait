@@ -1,6 +1,6 @@
 ![easyportrait](images/main.jpg)
 # EasyPortrait - Face Parsing and Portrait Segmentation Dataset
-We introduce a large-scale image dataset **EasyPortrait** for portrait segmentation and face parsing. Proposed dataset can be used in several tasks, such as background removal in conference applications, teeth whitening, face skin enhancement, red eye removal or eye colorization, and so on. 
+We introduce a large-scale image dataset **EasyPortrait** for portrait segmentation and face parsing. Proposed dataset can be used in several tasks, such as background removal in conference applications, teeth whitening, face skin enhancement, red eye removal or eye colorization, and so on.
 
 EasyPortrait dataset size is about **91.78GB**, and it contains **40,000** RGB images (~38.3K FullHD images) with high quality annotated masks. This dataset is divided into training set, validation set and test set by subject `user_id`. The training set includes 30,000 images, the validation set includes 4,000 images, and the test set includes 6,000 images.
 
@@ -8,7 +8,7 @@ For more information see our paper [EasyPortrait – Face Parsing and Portrait S
 
 ## 🔥 Changelog
  - **`2023/11/13`**: We release EasyPortrait 2.0. ✌️
-   - **40,000** RGB images (~38.3K FullHD images) 
+   - **40,000** RGB images (~38.3K FullHD images)
    - Added diversity by region, race, human emotions and lighting conditions
    - The data was further cleared and new ones were added
    - Train/val/test split: (30,000) **75%** / (4,000) **10%** / (6,000) **15%** by subject `user_id`
@@ -23,17 +23,17 @@ For more information see our paper [EasyPortrait – Face Parsing and Portrait S
    - **8,377** unique persons
    <!-- - The distance is 0.5 to 4 meters from the camera -->
 
- Old EasyPortrait dataset is also available into branch `EasyPortrait_v1`! 
+ Old EasyPortrait dataset is also available into branch `EasyPortrait_v1`!
 ## Downloads
 
 | Link                                                                                                          | Size  |
 |---------------------------------------------------------------------------------------------------------------|-------|
-| [`images`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/images.zip)           | 91.8 GB  |
-| [`annotations`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/annotations.zip) | 657.1 MB  |
-| [`meta`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/meta.zip) | 1.9 MB  |
-| [`train set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/train.zip)         | 68.3 GB |
-| [`validation set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/val.zip)      | 10.7 GB  |
-| [`test set`](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/v2/test.zip)           | 12.8 GB  |
+| [`images`](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/v2/images.zip)           | 91.8 GB  |
+| [`annotations`](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/v2/annotations.zip) | 657.1 MB  |
+| [`meta`](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/v2/meta.zip) | 1.9 MB  |
+| [`train set`](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/v2/train.zip)         | 68.3 GB |
+| [`validation set`](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/v2/val.zip)      | 10.7 GB  |
+| [`test set`](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/v2/test.zip)           | 12.8 GB  |
 
 Also, you can download EasyPortrait dataset from [Kaggle](https://www.kaggle.com/datasets/kapitanov/easyportrait).
 
@@ -45,53 +45,53 @@ Also, you can download EasyPortrait dataset from [Kaggle](https://www.kaggle.com
 │   ├── val/           # Validation set: 4k
 │   ├── test/          # Test set: 6k
 ├── annotations.zip
-│   ├── train/     
-│   ├── val/       
-│   ├── test/      
+│   ├── train/
+│   ├── val/
+│   ├── test/
 ├── meta.zip       # Meta-information (width, height, brightness, imhash, user_id)
 ...
 ```
 
 ## Models
-We provide some pre-trained models as the baseline for portrait segmentation and face parsing. We use mean Intersection over Union (mIoU) as the main metric. 
+We provide some pre-trained models as the baseline for portrait segmentation and face parsing. We use mean Intersection over Union (mIoU) as the main metric.
 
 #### Portrait segmentation:
 | Model Name                                     | Parameters (M) | Input shape | mIoU      |
 |------------------------------------------------|----------------|-------------|-----------|
-| [BiSeNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/bisenet-ps.pth)                       | 56.5          | 384 x 384 | 97.95     |
-| [DANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/danet-ps.pth)                    | 190.2           | 384 x 384   | 98.63    |
-| [DeepLabv3](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/deeplabv3-ps.pth)                    | 260           | 384 x 384   | 98.63    |
-| [ExtremeC3Net](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/extremenet-ps.pth)                    | 0.15           | 384 x 384   | 96.54    |
-| [Fast SCNN](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fast_scnn-ps.pth)               | 6.13          | 384 x 384 | 97.64 |
-| [FCN + MobileNetv2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fcn-ps.pth)               | 31.17           | 384 x 384 | 98.19 |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-ps-1024.pth)                 | 108.91           | 1024 × 1024   | 98.54    |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-ps-512.pth)               | 108.91            | 512 × 512 | 98.64 |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-ps.pth)               | 108.91          | 384 x 384 | 98.64 |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-ps-224.pth)               | 108.91          | 224 × 224 | 98.31 |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-ps-1024.pth)  | 14.9          | 1024 × 1024 |98.74     |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-ps-512.pth)            | 14.9           | 512 × 512   | 98.66      |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-ps.pth)          | 14.9           | 384 x 384 | 98.61     |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-ps-224.pth)            | 14.9           | 224 × 224   | 98.17     |
-| [SINet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/sinet-ps.pth)                    | 0.13          | 384 x 384   | 93.32  |
+| [BiSeNet-V2](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/bisenet-ps.pth)                       | 56.5          | 384 x 384 | 97.95     |
+| [DANet](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/danet-ps.pth)                    | 190.2           | 384 x 384   | 98.63    |
+| [DeepLabv3](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/deeplabv3-ps.pth)                    | 260           | 384 x 384   | 98.63    |
+| [ExtremeC3Net](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/extremenet-ps.pth)                    | 0.15           | 384 x 384   | 96.54    |
+| [Fast SCNN](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fast_scnn-ps.pth)               | 6.13          | 384 x 384 | 97.64 |
+| [FCN + MobileNetv2](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fcn-ps.pth)               | 31.17           | 384 x 384 | 98.19 |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-ps-1024.pth)                 | 108.91           | 1024 × 1024   | 98.54    |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-ps-512.pth)               | 108.91            | 512 × 512 | 98.64 |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-ps.pth)               | 108.91          | 384 x 384 | 98.64 |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-ps-224.pth)               | 108.91          | 224 × 224 | 98.31 |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-ps-1024.pth)  | 14.9          | 1024 × 1024 |98.74     |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-ps-512.pth)            | 14.9           | 512 × 512   | 98.66      |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-ps.pth)          | 14.9           | 384 x 384 | 98.61     |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-ps-224.pth)            | 14.9           | 224 × 224   | 98.17     |
+| [SINet](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/sinet-ps.pth)                    | 0.13          | 384 x 384   | 93.32  |
 
 
 #### Face parsing:
 | Model Name                                     | Parameters (M) | Input shape | mIoU      |
 |------------------------------------------------|----------------|-------------|-----------|
-| [BiSeNet-V2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/bisenet-fp.pth)                       | 56.5          | 384 x 384 | 76.72     |
-| [DANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/danet-fp.pth)                    | 190.2           | 384 x 384   | 79.3    |
-| [DeepLabv3](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/deeplabv3-fp.pth)                    | 260           | 384 x 384   | 79.11    |
-| [EHANet](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/ehanet-fp.pth)                    | 44.81          | 384 x 384   | 72.56    |
-| [Fast SCNN](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fast_scnn-fp.pth)               | 6.13          | 384 x 384 | 67.56|
-| [FCN + MobileNetv2](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fcn-fp.pth)               | 31.17           | 384 x 384 | 75.23 |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-fp-1024.pth)                 | 108.91           | 1024 × 1024   | 85.37   |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-fp-512.pth)               | 108.91            | 512 × 512 | 83.33 |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-fp.pth)               | 108.91          | 384 x 384 | 81.83  |
-| [FPN + ResNet50](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/fpn-fp-224.pth)               | 108.91          | 224 × 224 | 75.6 |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-fp-1024.pth)  | 14.9          | 1024 × 1024 |85.42     |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-fp-512.pth)            | 14.9           | 512 × 512   | 83.19      |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-fp.pth)          | 14.9           | 384 x 384 | 81.38    |
-| [SegFormer-B0](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/easyportrait/experiments/models/segformer-fp-224.pth)            | 14.9           | 224 × 224   | 74.83     |
+| [BiSeNet-V2](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/bisenet-fp.pth)                       | 56.5          | 384 x 384 | 76.72     |
+| [DANet](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/danet-fp.pth)                    | 190.2           | 384 x 384   | 79.3    |
+| [DeepLabv3](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/deeplabv3-fp.pth)                    | 260           | 384 x 384   | 79.11    |
+| [EHANet](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/ehanet-fp.pth)                    | 44.81          | 384 x 384   | 72.56    |
+| [Fast SCNN](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fast_scnn-fp.pth)               | 6.13          | 384 x 384 | 67.56|
+| [FCN + MobileNetv2](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fcn-fp.pth)               | 31.17           | 384 x 384 | 75.23 |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-fp-1024.pth)                 | 108.91           | 1024 × 1024   | 85.37   |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-fp-512.pth)               | 108.91            | 512 × 512 | 83.33 |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-fp.pth)               | 108.91          | 384 x 384 | 81.83  |
+| [FPN + ResNet50](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/fpn-fp-224.pth)               | 108.91          | 224 × 224 | 75.6 |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-fp-1024.pth)  | 14.9          | 1024 × 1024 |85.42     |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-fp-512.pth)            | 14.9           | 512 × 512   | 83.19      |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-fp.pth)          | 14.9           | 384 x 384 | 81.38    |
+| [SegFormer-B0](https://rndml-team-cv.obs.ru-moscow-1.hc.sbercloud.ru/datasets/easyportrait/experiments/models/segformer-fp-224.pth)            | 14.9           | 224 × 224   | 74.83     |
 
 
 ## Annotations
@@ -114,8 +114,8 @@ Also, we provide some additional meta-information for dataset in `annotations/me
 
 |    | image_name | user_id | height | width | set | brightness |
 |---:|:--------------|:--------|:----------|------:|-------:|-----------:|
-|  0 | a753e021-...  | 56...   | 720    |  960 |   train |        126 | 
-|  1 | 4ff04492-...  | ba...   | 1920    |  1440 |   test |        173 | 
+|  0 | a753e021-...  | 56...   | 720    |  960 |   train |        126 |
+|  1 | 4ff04492-...  | ba...   | 1920    |  1440 |   test |        173 |
 |  2 | e8934c99-...  | 1d...   | 1920    |  1440 |   val |        187 |
 
 where:
@@ -124,7 +124,7 @@ where:
 - `height` - image height
 - `width` - image width
 - `brightness` - image brightness
-- `set` - "train", "test" or "val" for train / test / val subsets respectively 
+- `set` - "train", "test" or "val" for train / test / val subsets respectively
 
 ## Images
 ![easyportrait](images/data.jpg)
