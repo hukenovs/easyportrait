@@ -179,7 +179,7 @@ For installation process follow the instructions [here](https://github.com/open-
 - [Karina Kvanchiani](https://www.linkedin.com/in/kvanchiani)
 - [Elizaveta Petrova](https://www.linkedin.com/in/kleinsbotle)
 - [Karen Efremyan](https://www.linkedin.com/in/befozg)
-- [Alexander Sautin](https://www.linkedin.com/in/befozg/alexander-sautin-b5039623b)
+- [Alexander Sautin](https://www.linkedin.com/in/alexander-sautin-b5039623b)
 
 ## Links
 - [arXiv](https://arxiv.org/abs/2304.13509)
