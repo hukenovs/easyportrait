@@ -1,15 +1,9 @@
-import os.path as osp
-
-import mmcv
-import numpy as np
-from PIL import Image
-
-from .builder import DATASETS
-from .custom import CustomDataset
+from mmseg.registry import DATASETS
+from .basesegdataset import BaseSegDataset
 
 
 @DATASETS.register_module()
-class EasyPortraitFPDataset(CustomDataset):
+class EasyPortraitFPDataset(BaseSegDataset):
     """EasyPortraitFPDataset dataset.
     
     In segmentation map annotation for EasyPortrait, 0 stands for background,
@@ -18,13 +12,15 @@ class EasyPortraitFPDataset(CustomDataset):
     '.png'.
     """
     
-    CLASSES = ('background', 'skin',
-               'left brow', 'right brow', 'left eye',
-               'right eye', 'lips', 'teeth')
+    METAINFO = dict(
     
-    PALETTE = [[0, 0, 0], [160, 221, 255],
-               [130, 106, 237], [200, 121, 255], [255, 183, 255],
-               [0, 144, 193], [113, 137, 255], [230, 232, 230]]
+        classes = ('background', 'skin',
+                'left brow', 'right brow', 'left eye',
+                'right eye', 'lips', 'teeth'),
+        
+        palette = [[0, 0, 0], [160, 221, 255],
+                [130, 106, 237], [200, 121, 255], [255, 183, 255],
+                [0, 144, 193], [113, 137, 255], [230, 232, 230]])
     
     def __init__(self, **kwargs):
         super(EasyPortraitFPDataset, self).__init__(
@@ -32,10 +28,10 @@ class EasyPortraitFPDataset(CustomDataset):
             seg_map_suffix='.png',
             reduce_zero_label=False,
             **kwargs)
-        assert self.file_client.exists(self.img_dir)
+        #assert self.file_client.exists(self.img_dir)
         
 @DATASETS.register_module()
-class EasyPortraitFPDatasetCross(CustomDataset):
+class EasyPortraitFPDatasetCross(BaseSegDataset):
     """EasyPortraitFPDatasetCross dataset.
     
     In segmentation map annotation for EasyPortrait, 0 stands for background,
@@ -43,16 +39,17 @@ class EasyPortraitFPDatasetCross(CustomDataset):
     The ``img_suffix`` is fixed to '.jpg' and ``seg_map_suffix`` is fixed to
     '.png'.
     """
-        
-    CLASSES = ('background', 'left brow', 'right brow', 'left eye', 'right eye', 'lips')
-    PALETTE = [[0, 0, 0], [160, 221, 255],
-               [130, 106, 237], [200, 121, 255], [255, 183, 255],
-               [0, 144, 193]]
     
+    METAINFO = dict(
+        classes = ('background', 'left brow', 'right brow', 'left eye', 'right eye', 'lips'),
+        palette = [[0, 0, 0], [160, 221, 255],
+               [130, 106, 237], [200, 121, 255], [255, 183, 255],
+               [0, 144, 193]])
+
     def __init__(self, **kwargs):
         super(EasyPortraitFPDatasetCross, self).__init__(
             img_suffix='.jpg',
             seg_map_suffix='.png',
             reduce_zero_label=False,
             **kwargs)
-        assert self.file_client.exists(self.img_dir)
+        #assert self.file_client.exists(self.img_dir)

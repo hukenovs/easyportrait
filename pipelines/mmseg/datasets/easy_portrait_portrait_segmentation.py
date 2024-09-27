@@ -1,15 +1,8 @@
-import os.path as osp
-
-import mmcv
-import numpy as np
-from PIL import Image
-
-from .builder import DATASETS
-from .custom import CustomDataset
-
+from mmseg.registry import DATASETS
+from .basesegdataset import BaseSegDataset
 
 @DATASETS.register_module()
-class EasyPortraitPSDataset(CustomDataset):
+class EasyPortraitPSDataset(BaseSegDataset):
     """EasyPortrait dataset.
     
     In segmentation map annotation for EasyPortrait, 0 stands for background,
@@ -18,9 +11,10 @@ class EasyPortraitPSDataset(CustomDataset):
     '.png'.
     """
     
-    CLASSES = ('background', 'person')
+    METAINFO = dict(
+        classes = ('background', 'person'),
     
-    PALETTE = [[0, 0, 0], [160, 221, 255]]
+        palette = [[0, 0, 0], [160, 221, 255]])
     
     def __init__(self, **kwargs):
         super(EasyPortraitPSDataset, self).__init__(
@@ -28,4 +22,4 @@ class EasyPortraitPSDataset(CustomDataset):
             seg_map_suffix='.png',
             reduce_zero_label=False,
             **kwargs)
-        assert self.file_client.exists(self.img_dir)
+        #assert self.file_client.exists(self.img_dir)
